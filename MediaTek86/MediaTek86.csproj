@@ -90,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bddmanager\BddManager.cs" />
+    <Compile Include="dal\Access.cs" />
+    <Compile Include="modele\Absence.cs" />
+    <Compile Include="modele\Responsable.cs" />
+    <Compile Include="modele\Motif.cs" />
+    <Compile Include="modele\Personnel.cs" />
+    <Compile Include="modele\Service.cs" />
     <Compile Include="vue\FrmConnection.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="controleur\" />
-    <Folder Include="modele\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
