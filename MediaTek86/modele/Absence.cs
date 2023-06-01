@@ -9,7 +9,7 @@ namespace MediaTek86.modele
     /// <summary>
     /// Classe métier des abscences
     /// </summary>
-    class Absence
+    public class Absence
     {
         string idpersonnel { get; }
         DateTime datedebut { get; }

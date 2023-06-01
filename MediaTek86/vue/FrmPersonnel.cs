@@ -8,10 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MediaTek86.vue
-{
-    public partial class FrmPersonnel : Form
+namespace MediaTek86.vue { 
+
+     /// <summary>
+     /// Fenêtre d'affichage de l'application
+     /// </summary>
+public partial class FrmPersonnel : Form
     {
+        /// <summary>
+        /// Construction des composants graphiques et appel des autres initialisations
+        /// </summary>
+
         public FrmPersonnel()
         {
             InitializeComponent();

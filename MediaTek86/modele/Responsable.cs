@@ -9,7 +9,7 @@ namespace MediaTek86.modele
     /// <summary>
     /// Classe pour se connecter en tant que responsable
     /// </summary>
-    class Responsable
+    public class Responsable
     {
         string login { get; }
         string pwd { get; }

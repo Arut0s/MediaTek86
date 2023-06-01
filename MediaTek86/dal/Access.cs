@@ -8,7 +8,10 @@ using System.Windows.Forms;
 
 namespace MediaTek86.dal
 {
-    class Access
+    /// <summary>
+    /// Classe d'acces a la BDD
+    /// </summary>
+    public class Access
     {
         /// <summary>
         /// nom de connexion à la bdd

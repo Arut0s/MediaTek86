@@ -9,8 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace MediaTek86
 {
+    /// <summary>
+    /// Fenêtre d'authentification
+    /// </summary>
     public partial class FrmConnection : Form
     {
+        /// <summary>
+        /// Construction des composants graphiques et appel des autres initialisations
+        /// </summary>
         public FrmConnection()
         {
             InitializeComponent();

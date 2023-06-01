@@ -9,7 +9,7 @@ namespace MediaTek86.modele
     /// <summary>
     /// Classe métier Service
     /// </summary>
-    class Service
+    public class Service
     {
         int idservice { get; }
         string nom { get; }

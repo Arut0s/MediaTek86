@@ -9,7 +9,7 @@ namespace MediaTek86.modele
     /// <summary>
     /// Classe métier des motifs d'absence
     /// </summary>
-    class Motif
+    public class Motif
     {
         int idmotif { get; }
         string libelle { get;}

@@ -9,7 +9,7 @@ namespace MediaTek86.modele
     ///<summary>
     ///classe métier pour du personnel
     ///</summary>
-    class Personnel
+    public class Personnel
     {
         int idpersonnel { get; }
         int idservice { get; }
