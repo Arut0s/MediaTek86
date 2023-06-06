@@ -61,5 +61,16 @@ public partial class FrmPersonnel : Form
                 MessageBox.Show("Une ligne doit être sélectionnée.", "Information");
             }
         }
+
+        private void btnAjouterPerso_Click(object sender, EventArgs e)
+        {
+            FrmAjoutPersonnel ajout = new FrmAjoutPersonnel();
+            ajout.ShowDialog();
+        }
+
+        private void FrmPersonnel_Activated(object sender, EventArgs e)
+        {
+            Init();
+        }
     }
 }

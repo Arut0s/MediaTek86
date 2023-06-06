@@ -64,5 +64,29 @@ namespace MediaTek86.dal
                 }
             }
         }
+        public void AddPersonnel(Personnel personnel)
+        {
+            if (access.Manager != null)
+            {
+                string req = "insert into personnel(idpersonnel, idservice, nom, prenom, tel, mail) ";
+                req += "values (@idpersonnel, @idservice, @nom, @prenom, @tel, @mail);";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@idpersonnel", personnel.idpersonnel);
+                parameters.Add("@idservice", personnel.idservice);
+                parameters.Add("@nom", personnel.nom);
+                parameters.Add("@prenom", personnel.prenom);
+                parameters.Add("@tel", personnel.tel);
+                parameters.Add("@mail", personnel.mail);
+                try
+                {
+                    access.Manager.ReqUpdate(req, parameters);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Environment.Exit(0);
+                }
+            }
+        }
     }
 }

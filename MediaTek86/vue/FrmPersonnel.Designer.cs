@@ -58,6 +58,7 @@ namespace MediaTek86.vue
             this.btnAjouterPerso.TabIndex = 1;
             this.btnAjouterPerso.Text = "Ajouter";
             this.btnAjouterPerso.UseVisualStyleBackColor = true;
+            this.btnAjouterPerso.Click += new System.EventHandler(this.btnAjouterPerso_Click);
             // 
             // btnModifierPerso
             // 
@@ -149,6 +150,7 @@ namespace MediaTek86.vue
             this.Controls.Add(this.lstPersonnel);
             this.Name = "FrmPersonnel";
             this.Text = "Form2";
+            this.Activated += new System.EventHandler(this.FrmPersonnel_Activated);
             this.ResumeLayout(false);
             this.PerformLayout();
 
