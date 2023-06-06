@@ -21,5 +21,10 @@ namespace MediaTek86.controleur
         {
             return personnelAccess.GetLesPersonnels();
         }
+        public void DelPersonnel(Personnel personnel)
+        {
+            personnelAccess.DelPersonnel(personnel);
+        }
+
     }
 }

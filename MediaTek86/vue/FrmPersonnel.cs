@@ -43,5 +43,23 @@ public partial class FrmPersonnel : Form
                 lstPersonnel.Items.Add(personnel.ToString());
             }
         }
+
+        private void btnSupprimerPerso_Click(object sender, EventArgs e)
+        {
+            if (lstPersonnel.SelectedIndex > -1)
+            {
+                List<Personnel> lesPersonnels = controller.GetLesPersonnels();
+                Personnel personnel = lesPersonnels[lstPersonnel.SelectedIndex];
+                if (MessageBox.Show("Voulez-vous vraiment supprimer " + personnel.nom + " " + personnel.prenom + " ?", "Confirmation de suppression", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    controller.DelPersonnel(personnel);
+                    RemplirListPersonnel();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Une ligne doit être sélectionnée.", "Information");
+            }
+        }
     }
 }

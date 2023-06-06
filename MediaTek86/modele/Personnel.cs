@@ -11,12 +11,12 @@ namespace MediaTek86.modele
     ///</summary>
     public class Personnel
     {
-        int idpersonnel { get; }
-        int idservice { get; }
-        string nom{get;}
-        string prenom { get; }
-        string tel { get; }
-        string mail { get; }
+        public int idpersonnel { get; }
+        public int idservice { get; }
+        public string nom{get;}
+        public string prenom { get; }
+        public string tel { get; }
+        public string mail { get; }
 
         /// <summary>
         /// Constructeur de la classe Personnel
@@ -39,7 +39,7 @@ namespace MediaTek86.modele
 
         public override string ToString()
         {
-            return nom+" "+prenom;
+            return nom+" "+prenom+" ("+tel+") "+mail;
         }
 
     }

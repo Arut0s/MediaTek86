@@ -37,13 +37,32 @@ namespace MediaTek86.dal
                         }
                     }
                 }
-                catch (Exception e)
+                catch (Exception ex)
                 {
-                    Console.WriteLine(e.Message);
+                    Console.WriteLine(ex.Message);
                     Environment.Exit(0);
                 }
             }
             return lesDeveloppeurs;
+        }
+
+        public void DelPersonnel(Personnel personnel)
+        {
+            if (access.Manager != null)
+            {
+                string req = "delete from personnel where idpersonnel = @idpersonnel;";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@idpersonnel", personnel.idpersonnel);
+                try
+                {
+                    access.Manager.ReqUpdate(req, parameters);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Environment.Exit(0);
+                }
+            }
         }
     }
 }
