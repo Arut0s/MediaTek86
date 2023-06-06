@@ -11,7 +11,7 @@ namespace MediaTek86.modele
     /// </summary>
     public class Absence
     {
-        string idpersonnel { get; }
+        int idpersonnel { get; }
         DateTime datedebut { get; }
         int idmotif { get; }
         DateTime datefin { get; }
@@ -22,7 +22,7 @@ namespace MediaTek86.modele
         /// <param name="datedebut"></param>
         /// <param name="idmotif"></param>
         /// <param name="datefin"></param>
-        public Absence(string idpersonnel, DateTime datedebut, int idmotif, DateTime datefin)
+        public Absence(int idpersonnel, DateTime datedebut, int idmotif, DateTime datefin)
         {
             this.idpersonnel = idpersonnel;
             this.datedebut = datedebut;

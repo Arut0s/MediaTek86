@@ -37,5 +37,10 @@ namespace MediaTek86.modele
             this.mail = mail;
         }
 
+        public override string ToString()
+        {
+            return nom+" "+prenom;
+        }
+
     }
 }

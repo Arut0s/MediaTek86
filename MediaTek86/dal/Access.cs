@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediaTek86.bddmanager;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace MediaTek86.dal
 {
@@ -16,7 +17,7 @@ namespace MediaTek86.dal
         /// <summary>
         /// nom de connexion à la bdd
         /// </summary>
-        private static readonly string connectionName = "server=127.0.01;user=responsable;database=MediaTek86;password=P@$$word1";
+        private static readonly string connectionString = "server=localhost;user id = responsable; password=P@$$word1;database=mediatek86;SslMode=none";
         /// <summary>
         /// instance unique de la classe
         /// </summary>
@@ -25,18 +26,23 @@ namespace MediaTek86.dal
         /// Getter sur l'objet d'accès aux données
         /// </summary>
         public BddManager Manager { get; }
+
+        /// <summary>
+        /// Création unique de l'objet de type BddManager
+        /// Arrête le programme si l'accès à la BDD a échoué
+        /// </summary>
         private Access()
         {
             try
             {
-                Manager = BddManager.GetInstance(connectionName);
-                MessageBox.Show("Succes");
+                Manager = BddManager.GetInstance(connectionString);
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show(ex.Message);
+                Environment.Exit(0);
             }
         }
+
         /// <summary>
         /// Création d'une seule instance de la classe
         /// </summary>
@@ -49,5 +55,7 @@ namespace MediaTek86.dal
             }
             return instance;
         }
+
+        
     }
 }

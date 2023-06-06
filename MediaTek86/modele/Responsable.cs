@@ -11,8 +11,8 @@ namespace MediaTek86.modele
     /// </summary>
     public class Responsable
     {
-        string login { get; }
-        string pwd { get; }
+        public string login { get; }
+        public string pwd { get; }
         /// <summary>
         /// Constructeur pour Responsable
         /// </summary>
